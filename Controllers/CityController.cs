@@ -46,6 +46,7 @@ namespace CityProvinceLab.Controllers
         // GET: City/Create
         public IActionResult Create()
         {
+            ViewBag.ListOfProvinces = getProvincesSelectList();
             return View();
         }
 
@@ -78,6 +79,7 @@ namespace CityProvinceLab.Controllers
             {
                 return NotFound();
             }
+            ViewBag.ListOfProvinces = getProvincesSelectList();
             return View(city);
         }
 
@@ -148,6 +150,22 @@ namespace CityProvinceLab.Controllers
         private bool CityExists(int id)
         {
             return _context.Cities.Any(e => e.CityId == id);
+        }
+        private List<SelectListItem> getProvincesSelectList()
+        {
+            List<Province> provincesList = _context.Provinces.ToList();
+
+            List<SelectListItem> list = provincesList.ConvertAll(a =>
+              {
+                  return new SelectListItem()
+                  {
+                      Text = a.ProvinceName,
+                      Value = a.ProvinceName,
+                      Selected = false
+                  };
+              });
+            return list;
+
         }
     }
 }

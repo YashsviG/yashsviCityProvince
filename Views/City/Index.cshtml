@@ -31,7 +31,7 @@
             <th>
                 @Html.DisplayNameFor(model => model.ProvinceName)
             </th>
-            @* <th></th> *@
+            <th></th>
         </tr>
     </thead>
     <tbody>
@@ -49,11 +49,11 @@
             <td>
                 @Html.DisplayFor(modelItem => item.ProvinceName)
             </td>
-            @* <td>
+            <td>
                 <a asp-action="Edit" asp-route-id="@item.CityId">Edit</a> |
                 <a asp-action="Details" asp-route-id="@item.CityId">Details</a> |
                 <a asp-action="Delete" asp-route-id="@item.CityId">Delete</a>
-            </td> *@
+            </td>
         </tr>
 }
     </tbody>

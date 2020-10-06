@@ -49,21 +49,21 @@ namespace CityProvinceLab.Data.Migrations
                         {
                             CityId = 1,
                             CityName = "Vancouver",
-                            Population = 2000000,
+                            Population = 3000000,
                             ProvinceName = "British Columbia"
                         },
                         new
                         {
                             CityId = 2,
                             CityName = "Calgary",
-                            Population = 2000000,
+                            Population = 5000000,
                             ProvinceName = "Alberta"
                         },
                         new
                         {
                             CityId = 3,
                             CityName = "London",
-                            Population = 2000000,
+                            Population = 9000000,
                             ProvinceName = "Ontario"
                         });
                 });
